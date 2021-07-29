@@ -4,4 +4,8 @@ thirdparty/limine
 thirdparty/stivale
 
 #Temp for now gonna be removed some point
-Makefile
+./Makefile
+
+
+#Vscode
+.vscode

@@ -92,3 +92,86 @@ struct multiboot_header
     multiboot_uint32_t checksum;
 };
 
+struct multiboot_header_tag
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags
+    multiboot_uint32_t size;
+};
+
+struct multiboot_header_tag_information_request
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+    multiboot_uint32_t requests[0];
+};
+
+struct multiboot_header_tag_address
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+    multiboot_uint32_t header_addr;
+    multiboot_uint32_t load_addr;
+    multiboot_uint32_t load_end_addr;
+    multiboot_uint32_t bss_end_addr;
+};
+
+struct multiboot_header_tag_console_flags
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+    multiboot_uint32_t console_flags;
+};
+
+struct multiboot_header_tag_framebuffer
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+    multiboot_uint32_t width;
+    multiboot_uint32_t height;
+    multiboot_uint32_t depth;
+};
+
+struct multiboot_header_tag_module_align
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+};
+
+struct multiboot_header_tag_relocatable
+{
+    multiboot_uint16_t type;
+    multiboot_uint16_t flags;
+    multiboot_uint32_t size;
+    multiboot_uint32_t min_addr;
+    multiboot_uint32_t max_addr;
+    multiboot_uint32_t align;
+    multiboot_uint32_t preference;
+};
+
+struct multiboot_color
+{
+    multiboot_uint8_t red;
+    multiboot_uint8_t green;
+    multiboot_uint8_t blue;
+};
+
+struct multiboot_mmap_entry
+{
+    multiboot_uint64_t addr;
+    multiboot_uint64_t len;
+#define MULTIBOOT_MEMORY_AVAILABLE 1
+#define MULTIBOOT_MEMORY_RESERVED 2
+#define MULTIBOOT_MEMORY_ACPI_RECLAIMABLE 3
+#define MULTIBOOT_MEMORY_NVS 4
+#define MULTIBOOT_MEMORY_BADRAM 5
+    multiboot_uint32_t type;
+    multiboot_uint32_t zero;
+};
+
+typedef struct multiboot_mmap_entry multiboot_memory_map_t;

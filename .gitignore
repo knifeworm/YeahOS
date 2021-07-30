@@ -1,11 +1,26 @@
-# ThirdParty
-thirdparty/echfs
-thirdparty/limine
-thirdparty/stivale
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-# Makefile
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# MakeFile
 Makefile
 
-
-#Vscode
-.vscode
+# Linker file
+linker.ld

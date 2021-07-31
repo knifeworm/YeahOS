@@ -19,11 +19,5 @@
 *.out
 *.app
 
-# MakeFile
-Makefile
-
-# Linker file
-linker.ld
-
 #VSCode
 /.vscode

@@ -21,3 +21,9 @@
 
 #VSCode
 /.vscode
+
+#Build
+kernel.o
+mykernel.bin
+mykernel.img
+loader.o

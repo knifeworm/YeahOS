@@ -2,7 +2,7 @@
 .set FLAGS, (1<<0 | 1<<1)
 .set CHECKSUM, -(MAGIC + FLAGS)
 
-.sections .multiboot
+.section .multiboot
     .long MAGIC
     .long FLAGS
     .long CHECKSUM
@@ -21,7 +21,7 @@ loader:
     call kernelMain
 
 
-stop:
+_stop:
     cli
     hlt
     jmp _stop
